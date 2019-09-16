@@ -7,8 +7,8 @@ namespace IssueDemo
     {
         static void Main(string[] args)
         {
-            ClassB instanceB = new ClassB();
-            Console.WriteLine(instanceB.GetFooBarFromC());
+            IClassB _bService = IOC.IOC.GetBService();
+            Console.WriteLine(_bService.GetFooBarFromC());
         }
     }
 }

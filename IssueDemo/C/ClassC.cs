@@ -3,7 +3,7 @@ using System;
 
 namespace C
 {
-    public class ClassC
+    internal class ClassC : IClassC
     {
         public string GetFooBar()
         {

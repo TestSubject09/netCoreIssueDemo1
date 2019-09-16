@@ -3,12 +3,16 @@ using System;
 
 namespace B
 {
-    public class ClassB
+    internal class ClassB : IClassB
     {
-        public string GetFooBarFromC()
+        readonly IClassC _serviceC;
+        public ClassB(IClassC serviceC)
         {
-            ClassC instanceC = new ClassC();
-            return instanceC.GetFooBar();
+            _serviceC = serviceC;
+        }
+        public string GetFooBarFromC()
+        {   
+            return _serviceC.GetFooBar();
         }
     }
 }
